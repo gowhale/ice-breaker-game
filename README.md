@@ -22,3 +22,25 @@ Once the timer has gone off, the team should go through their answers. If you ha
 5.	When the timer finishes go through the answers with the team 
 6.	Tally up scores
 7.	Repeat
+
+## Example Output
+
+```
+##################################################
+
+The letter randomly selected is: R
+
+How many questions would you like to see for the letter R: 8
+
+The following topics are:
+        1) Cities
+        2) TV Shows
+        3) Fruits
+        4) Animals
+        5) Hot drinks 
+        6) Countries
+        7) Clothing 
+        8) Movie titles
+
+##################################################
+```
