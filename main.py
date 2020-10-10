@@ -59,6 +59,10 @@ def main():
         display_questsions(questions_selected)
         print()
 
+        still_playing = input("Press enter for another round.")
+        if still_playing != "":
+            playing_game = False
+
 
 if __name__ == "__main__":
     main()
