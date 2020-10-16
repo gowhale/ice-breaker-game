@@ -17,15 +17,15 @@ def generate_random_letter():
 
 # This function will select questions from a text file
 def select_questions(n):
-    topic_file = open("topics.txt").read()
-    topics = topic_file.splitlines()
-    random_selection = random.sample(topics, n)
+    tvshows_file = open("tvshows.txt").read()
+    tvshows = tvshows_file.splitlines()
+    random_selection = random.sample(tvshows, n)
     return random_selection
 
 
 # This function will print out the questions in a nice format
 def display_questsions(questions):
-    print("The following topics are:")
+    print("The following TV Shows are:")
     for i in range(0, len(questions)):
         print("\t{}) {}".format(i+1, questions[i]))
 
@@ -50,7 +50,7 @@ def main():
         while question_count < 1 or question_count > 10:
             try:
                 question_count = int(input(
-                    "How many questions would you like to see for the letter {}: ".format(random_letter)))
+                    "How many TV Shows would you like to see for the letter {}: ".format(random_letter)))
             except:
                 print("INVALID INPUT, please select an integer between 1 and 10.")
 
