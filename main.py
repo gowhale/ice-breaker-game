@@ -24,7 +24,7 @@ def select_questions(n):
 
 
 # This function will print out the questions in a nice format
-def display_questsions(questions):
+def display_questions(questions):
     print("The following topics are:")
     for i in range(0, len(questions)):
         print("\t{}) {}".format(i+1, questions[i]))
@@ -56,7 +56,7 @@ def main():
 
         print()
         questions_selected = select_questions(question_count)
-        display_questsions(questions_selected)
+        display_questions(questions_selected)
         print()
 
         still_playing = input("Press enter for another round.")
