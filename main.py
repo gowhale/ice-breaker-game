@@ -15,8 +15,6 @@ def generate_random_letter():
     return letter
 
 
-
-
 # This function will select questions from a text file
 def select_questions(n):
     topic_file = open("topics.txt").read()
@@ -44,42 +42,27 @@ def main():
 
         print("#" * 50)
         print()
-        print("You can type:")
-        print("1 for SAME letter for every topic")
-        print("2 for DIFFERENT letter for each topic")
+        random_letter = generate_random_letter()
+        display_letter(random_letter)
         print()
-        user_input = input()
-        if int(user_input) == 1:
-            random_letter = generate_random_letter()
-            display_letter(random_letter)
-            print()
 
-            question_count = -1
-            while question_count < 1 or question_count > 10:
-                try:
-                    question_count = int(input(
-                        "How many questions would you like to see for the letter {}: ".format(random_letter)))
-                except:
-                    print("INVALID INPUT, please select an integer between 1 and 10.")
+        question_count = -1
+        while question_count < 1 or question_count > 10:
+            try:
+                question_count = int(input(
+                    "How many questions would you like to see for the letter {}: ".format(random_letter)))
+            except:
+                print("INVALID INPUT, please select an integer between 1 and 10.")
 
-            print()
-            questions_selected = select_questions(question_count)
-            display_questsions(questions_selected)
-            print()
+        print()
+        questions_selected = select_questions(question_count)
+        display_questsions(questions_selected)
+        print()
 
-            still_playing = input("Press enter for another round.")
-            if still_playing != "":
-                playing_game = False
-        elif int(user_input) == 2:
-            print("HAVENT ADDED OTHER GAMEMODE YET")
-            still_playing = input("Press enter for another round.")
-            if still_playing != "":
-                playing_game = False
-        else:
-            print("Thats not a choice.")
-            still_playing = input("Press enter for another round.")
-            if still_playing != "":
-                playing_game = False
+        still_playing = input("Press enter for another round.")
+        if still_playing != "":
+            playing_game = False
+
 
 if __name__ == "__main__":
     main()
