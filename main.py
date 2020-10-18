@@ -51,7 +51,7 @@ def main():
             try:
                 question_count = int(input(
                     "How many questions would you like to see for the letter {}: ".format(random_letter)))
-            except:
+            except ValueError:
                 print("INVALID INPUT, please select an integer between 1 and 10.")
 
         print()

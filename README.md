@@ -44,3 +44,8 @@ The following topics are:
 
 ##################################################
 ```
+
+## Versions of the game
+There are currently 2 versions of the game:
+1. Python       - main.py
+2. Java         - Main.java
