@@ -29,6 +29,7 @@ public class Main {
             Scanner sc = new Scanner(System.in);
             System.out.print("Press enter for another round.");
             String stillPlaying = sc.nextLine();
+            System.out.println();
 
             if (!stillPlaying.equals("")) {
                 playingGame = false;
