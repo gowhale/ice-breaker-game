@@ -50,7 +50,7 @@ def main():
         while question_count < 1 or question_count > 10:
             try:
                 question_count = int(input(
-                    "How many TV Shows would you like to see for the letter {}: ".format(random_letter)))
+                    "How many characters,starting with the letter {}, would you like to list from the TV Shows,: ".format(random_letter)))
             except:
                 print("INVALID INPUT, please select an integer between 1 and 10.")
 
